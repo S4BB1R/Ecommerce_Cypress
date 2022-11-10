@@ -9,6 +9,8 @@
   "author": "Sabbir Ahmed",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-subset": "^1.6.0",
     "cypress": "^10.11.0"
   }
 }

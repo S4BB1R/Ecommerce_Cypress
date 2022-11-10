@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+//  ✅ Navbar Items Validation ✅
+
+Cypress.Commands.add("navbarItems",(menuText) => {
+    cy.get("li > a")
+      .should("be.visible" ,menuText )
+      .should("contain.text", menuText)
+      .log(menuText + " Available in page");
+  }
+  
+  );
