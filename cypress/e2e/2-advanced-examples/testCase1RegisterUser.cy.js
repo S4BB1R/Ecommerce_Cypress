@@ -29,7 +29,7 @@ describe("Test Case 1: Register User", () =>{
 
     it (" Verify that home page is visible successfully ", ()=>{
 
-      cy.request(Cypress.env("url")).should(
+      cy.request("baseUrl").should(
         (response) => {
           expect(response.status).to.eq(200);
         }
@@ -79,7 +79,7 @@ describe("Test Case 1: Register User", () =>{
     if(nameInputField.should("be.visible"))
     {
       nameInputField.focus();
-      nameInputField.type(Cypress.env("name"));
+      nameInputField.type("name");
       cy.log( nameInputField + positiveMessage)
     }else{
       cy.visit(Cypress.env("url"));
