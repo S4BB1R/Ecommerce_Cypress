@@ -12,5 +12,8 @@
     "chai": "^4.3.7",
     "chai-subset": "^1.6.0",
     "cypress": "^10.11.0"
+  },
+  "dependencies": {
+    "chai-colors": "^1.0.1"
   }
 }

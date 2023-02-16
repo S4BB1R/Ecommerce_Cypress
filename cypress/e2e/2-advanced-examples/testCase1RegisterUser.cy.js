@@ -2,7 +2,8 @@
 
 import testCase1RegisterUserPage from '../../pageObject/testCase1RegisterPageObject.js';
 
-
+import chaiColors from 'chai-colors'
+chai.use(chaiColors)
 
 
 const positiveMessage = "Inputted Successfully" ; 
@@ -20,7 +21,7 @@ const mobileNumber = "+01235525" ;
 
 describe("Test Case 1: Register User", () =>{
 
-    it("Navigate to url 'http://automationexercise.com'",() =>{
+    it("Visit url 'http://automationexercise.com'",() =>{
 
       cy.visit('/');
       cy.url().should('contain', 'automationexercise');
@@ -34,7 +35,7 @@ describe("Test Case 1: Register User", () =>{
           expect(response.status).to.eq(200);
         }
       );
-      // cy.csrfCookies();
+      cy.csrfCookies();
     
       //             ✅  Navbar Validation  ✅
 
